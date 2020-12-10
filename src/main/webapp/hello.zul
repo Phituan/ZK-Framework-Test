@@ -1,0 +1,59 @@
+<zk>
+	<window hflex="1" vflex="1">
+		<div hflex="1" sclass="banner" style="padding:20px; border-bottom: solid;">
+			<hbox hflex="1" align="center">
+				<a href="http://www.zkoss.org/">
+					<image src="/images/logo.png" width="100px" />
+				</a>
+				<div width="400px">
+					<label value="Trường Đại học FPT" sclass="banner-head" />
+				</div>
+				<hbox hflex="1" vflex="1" pack="end" align="end">
+					<textbox ></textbox>
+					<button>Search</button>
+				</hbox>
+			</hbox>
+		</div>
+		<borderlayout>
+			<center>
+				<tabbox height="100%">
+					<tabs>
+						<tab label="Danh Sách Sinh Viên" closable="false" />
+						<tab label="Danh Sách Giảng Viên" closable="false" />
+						<tab label="Danh Sách Lớp Học" closable="false" />
+						<tab label="Danh Sách Môn Học" closable="false" />
+					</tabs>
+					<tabpanels>
+						<tabpanel>
+							<hbox align="center" pack="center" hflex="1" vflex="1">
+								<image src="/widgets/getting_started/img/car1.png" />
+							</hbox>
+						</tabpanel>
+						<tabpanel>
+							<hbox align="center" pack="center" hflex="1" vflex="1">
+								<image src="/widgets/getting_started/img/car2.png" />
+							</hbox>
+						</tabpanel>
+					</tabpanels>
+				</tabbox>
+			</center>
+		</borderlayout>
+
+
+		<!--<rowlayout>
+			<rowchildren colspan="3" >
+				<a>Danh Sách Sinh Viên</a>
+			</rowchildren>
+			<rowchildren colspan="3" >
+				<a>Danh Sách Giảng Viên</a>
+			</rowchildren>
+			<rowchildren colspan="3" >
+				<a>Danh Sách Môn Học</a>
+			</rowchildren>
+			<rowchildren colspan="3" >
+				<a>Danh Sách Lớp Học</a>
+			</rowchildren>
+		</rowlayout>-->
+
+	</window>
+</zk>
