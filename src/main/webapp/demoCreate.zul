@@ -1,0 +1,58 @@
+<window id="modalDialog" title="FPT University" border="normal" width="500px"
+        position="center" closable="true"
+        action="show: slideDown;hide: slideUp">
+    <vlayout>
+        <grid>
+            <columns>
+                <column hflex="1" label="Type" />
+                <column hflex="2" label="Content" align="center" />
+            </columns>
+            <rows>
+                <row>
+                    <label value="Họ Tên :" />
+                    <textbox value="@bind(fx.userName)"
+                             width="200px" tabindex="1" />
+                </row>
+                <row>
+                    <label value="Ngày Sinh" />
+                    <datebox value="@bind(fx.birthday)"
+                             format="@load(vm.dateFormat)" width="200px"  tabindex="7"/>
+                </row>
+                <row>
+                    <label value="Số Điện Thoại" />
+                    <textbox constraint="no empty" value="@bind(fx.telephone)"
+                             width="200px" maxlength="15" tabindex="5" />
+                </row>
+                <row>
+                    <label value="Dân Tộc" />
+                    <textbox width="200px"/>
+                </row>
+                <row>
+                    <label value="Giới Tính" />
+                    <textbox width="200px"/>
+                </row>
+                <row>
+                    <label value="Địa Chỉ" />
+                    <textbox width="200px"/>
+                </row>
+                <row>
+                    <label value="Thành Phố" />
+                    <textbox width="200px"/>
+                </row>
+                <row>
+                    <label value="Mã Lớp Học" />
+                    <textbox width="200px"/>
+                </row>
+                <row>
+                    <label value="Mã Môn Học" />
+                    <textbox width="200px"/>
+                </row>
+                <row>
+                    <label value="Email" />
+                    <textbox value="@bind(fx.email)" width="200px" tabindex="9" />
+                </row>
+            </rows>
+        </grid>
+        <button id="btn-save" hflex="1" label="Save"/>
+    </vlayout>
+</window>

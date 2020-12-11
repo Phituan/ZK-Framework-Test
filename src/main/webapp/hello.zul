@@ -1,23 +1,44 @@
+<?link rel="stylesheet" type="text/css" href="/CSS/style.css"?>
 <zk>
-	<window hflex="1" vflex="1">
+	<style>
+		.z-label {
+		font-size: 12px;
+		}
+		.z-column-content {
+		color: #FFFFFF;
+		font-size: 14px;
+		}
+		.btn-delete{
+		background: red;
+		padding:6px;
+
+		}
+		.btn-edit{
+		padding:6px;
+		}
+		.z-tabs{
+		width:200px;
+		}
+	</style>
+	<window hflex="1" vflex="1" style="font-size:12px">
 		<div hflex="1" sclass="banner" style="padding:20px; border-bottom: solid;">
 			<hbox hflex="1" align="center">
 				<a href="http://www.zkoss.org/">
 					<image src="/images/logo.png" width="100px" />
 				</a>
 				<div width="400px">
-					<label value="Trường Đại học FPT" sclass="banner-head" />
+					<label style="font-size:16px" value="Trường Đại học FPT" sclass="banner-head" />
 				</div>
 				<hbox hflex="1" vflex="1" pack="end" align="end">
-					<textbox ></textbox>
+					<textbox></textbox>
 					<button>Search</button>
 				</hbox>
 			</hbox>
 		</div>
 		<borderlayout>
 			<center>
-				<tabbox height="100%">
-					<tabs>
+				<tabbox orient="left" height="100%">
+					<tabs width="210px">
 						<tab label="Danh Sách Sinh Viên" closable="false" />
 						<tab label="Danh Sách Giảng Viên" closable="false" />
 						<tab label="Danh Sách Lớp Học" closable="false" />
@@ -25,13 +46,112 @@
 					</tabs>
 					<tabpanels>
 						<tabpanel>
-							<hbox align="center" pack="center" hflex="1" vflex="1">
-								<image src="/widgets/getting_started/img/car1.png" />
+							<hbox>
+								<button style="margin-right:5px"  iconSclass="z-icon-plus-square" label="Create Student" />
+							</hbox>
+							<hbox align="start" pack="center" vflex="1">
+								<grid style="text-align: center">
+									<columns style="text-align: center">
+										<column label="MaSv"/>
+										<column label="Họ Tên"/>
+										<column label="Ngày Sinh"/>
+										<column label="SĐT"/>
+										<column label="Dân Tộc"/>
+										<column label="Giới Tính"/>
+										<column label="Địa Chỉ"/>
+										<column label="MaLH"/>
+										<column label="MaMH"/>
+										<column label="Email"/>
+										<column label="Thành Phố"/>
+										<column/>
+									</columns>
+									<rows>
+										<row align="">
+											<label value="1"/>
+											<label value="Hồ Văn Hoàng"/>
+											<label value="25/10/2000"/>
+											<label value="0345610530"/>
+											<label value="Kinh"/>
+											<label value="Nam"/>
+											<label>Hồ Gươm Plaza, Mộ Lao, Hà Đông, Hà Nội</label>
+											<label value="4"/>
+											<label value="1"/>
+											<label value="vanhoang25@gmail.com"/>
+											<label value="Hà Nội"/>
+											<div>
+												<button id="edit-btn" apply="tutorial.controller.ModalController" sclass="btn-edit" iconSclass="z-icon-edit" autodisable="self"/>
+												<button sclass="btn-delete" iconSclass="z-icon-trash"/>
+											</div>
+										</row>
+										<row>
+											<label value="1"/>
+											<label value="Hồ Văn Hoàng"/>
+											<label value="25/10/2000"/>
+											<label value="vanhoang2510@gmail.com"/>
+											<label value="0345610530"/>
+											<label value="Kinh"/>
+											<label value="Nam"/>
+											<label value="Hồ Gươm Plaza, Mộ Lao, Hà Đông, Hà Nội"/>
+											<label value="Hà Nội"/>
+											<label value="Hà Đông"/>
+											<label value="2"/>
+											<label value="2"/>
+										</row>
+									</rows>
+								</grid>
 							</hbox>
 						</tabpanel>
 						<tabpanel>
-							<hbox align="center" pack="center" hflex="1" vflex="1">
-								<image src="/widgets/getting_started/img/car2.png" />
+							<hbox>
+								<button style="margin-right:5px"  iconSclass="z-icon-plus-square" label="Create Student" />
+							</hbox>
+							<hbox align="start" pack="center" vflex="1">
+								<grid style="text-align: center">
+									<columns style="text-align: center">
+										<column align="center" label="MaSv"/>
+										<column label="Họ Tên"/>
+										<column label="Ngày Sinh"/>
+										<column label="SDT"/>
+										<column label="Dân Tộc"/>
+										<column label="Giới Tính"/>
+										<column label="Địa Chỉ"/>
+										<column label="Tỉnh/Thành Phố"/>
+										<column label="Quận/Huyện"/>
+										<column label="MaLH"/>
+										<column label="MaMH"/>
+										<column label="Email"/>
+									</columns>
+									<rows>
+										<row align="">
+											<label value="1"/>
+											<label value="Hồ Văn Hoàng"/>
+											<label value="25/10/2000"/>
+											<label value="0345610530"/>
+											<label value="Kinh"/>
+											<label value="Nam"/>
+											<label>Hồ Gươm Plaza, Mộ Lao, Hà Đông, Hà Nội</label>
+											<label value="Hà Nội"/>
+											<label value="Hà Đông"/>
+											<label value="2"/>
+											<label value="2"/>
+											<label>vanhoang25@gmail.com</label>
+										</row>
+										<row>
+											<label value="1"/>
+											<label value="Hồ Văn Hoàng"/>
+											<label value="25/10/2000"/>
+											<label value="vanhoang2510@gmail.com"/>
+											<label value="0345610530"/>
+											<label value="Kinh"/>
+											<label value="Nam"/>
+											<label value="Hồ Gươm Plaza, Mộ Lao, Hà Đông, Hà Nội"/>
+											<label value="Hà Nội"/>
+											<label value="Hà Đông"/>
+											<label value="2"/>
+											<label value="2"/>
+										</row>
+									</rows>
+								</grid>
 							</hbox>
 						</tabpanel>
 					</tabpanels>

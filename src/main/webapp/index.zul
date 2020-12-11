@@ -5,6 +5,7 @@
 		<a href="search.zul">search.zul</a>
 		<a href="searchMvc.zul">searchMvc.zul</a>
 		<a href="searchMvvm.zul">searchMvvm.zul</a>
+		<a href="demoCreate.zul">aa</a>
 	</vlayout>
 </window>
 </zk>
