@@ -72,6 +72,10 @@
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zuti</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkplus</artifactId>
 <!--			<version>${project.version}</version>-->
 		</dependency>

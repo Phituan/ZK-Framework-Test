@@ -1,0 +1,8 @@
+<window id="modalDialogEdit" title="FPT University" border="normal" width="300px"
+		position="center" closable="true"
+		action="show: slideDown;hide: slideUp">
+	<hbox align="center" pack="center">
+		<button  label="Yes" iconSclass="z-icon-check-circle"></button>
+		<button label="No" style="background: red" iconSclass="z-icon-times-circle"></button>
+	</hbox>
+</window>

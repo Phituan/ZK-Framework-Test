@@ -1,5 +1,6 @@
 package tutorial.controller;
 
+import jdk.nashorn.internal.ir.CallNode;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
@@ -11,10 +12,22 @@ public class ModalController extends SelectorComposer<Component> {
     private static final long serialVersionUID = 1L;
 
     @Listen("onClick = #edit-btn")
-    public void showModal(Event e) {
+    public void showModalEdit(Event e) {
         //create a window programmatically and use it as a modal dialog.
         Window window = (Window) Executions.createComponents(
-                "demoCreate.zul", null, null);
+                "modalCreate.zul", null, null);
+        window.doModal();
+    }
+    @Listen("onClick = #btn-create")
+    public void showModalCreate(Event e) {
+        //create a window programmatically and use it as a modal dialog.
+        Window window = (Window) Executions.createComponents(
+                "modalCreate.zul", null, null);
+        window.doModal();
+    }
+    @Listen("onClick = #btn-delete")
+    public void showModalDelete(Event e ) {
+        Window window = (Window) Executions.createComponents("modalDelete.zul", null, null);
         window.doModal();
     }
 }

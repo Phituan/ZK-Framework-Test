@@ -27,10 +27,10 @@
 					<image src="/images/logo.png" width="100px" />
 				</a>
 				<div width="400px">
-					<label style="font-size:16px" value="Trường Đại học FPT" sclass="banner-head" />
+					<label style="font-size:16px;font-weight:bold" value="Trường Đại học FPT" sclass="banner-head" />
 				</div>
 				<hbox hflex="1" vflex="1" pack="end" align="end">
-					<textbox></textbox>
+					<textbox placeholder="Input key word"/>
 					<button>Search</button>
 				</hbox>
 			</hbox>
@@ -38,7 +38,7 @@
 		<borderlayout>
 			<center>
 				<tabbox orient="left" height="100%">
-					<tabs width="210px">
+					<tabs width="189px" style="text-overflow: ellipsis; overflow: hidden;white-space: nowrap;padding-right: 4px;">
 						<tab label="Danh Sách Sinh Viên" closable="false" />
 						<tab label="Danh Sách Giảng Viên" closable="false" />
 						<tab label="Danh Sách Lớp Học" closable="false" />
@@ -47,7 +47,7 @@
 					<tabpanels>
 						<tabpanel>
 							<hbox>
-								<button style="margin-right:5px"  iconSclass="z-icon-plus-square" label="Create Student" />
+								<button id="btn-create" apply="tutorial.controller.ModalController" style="margin-right:5px"  iconSclass="z-icon-plus-square" label="Create Student" autodisable="self" />
 							</hbox>
 							<hbox align="start" pack="center" vflex="1">
 								<grid style="text-align: center">
@@ -80,7 +80,7 @@
 											<label value="Hà Nội"/>
 											<div>
 												<button id="edit-btn" apply="tutorial.controller.ModalController" sclass="btn-edit" iconSclass="z-icon-edit" autodisable="self"/>
-												<button sclass="btn-delete" iconSclass="z-icon-trash"/>
+												<button id="btn-delete" apply="tutorial.controller.ModalController" sclass="btn-delete" iconSclass="z-icon-trash"/>
 											</div>
 										</row>
 										<row>
@@ -103,7 +103,9 @@
 						</tabpanel>
 						<tabpanel>
 							<hbox>
-								<button style="margin-right:5px"  iconSclass="z-icon-plus-square" label="Create Student" />
+								<div>
+									<button id="btn-create-sv" apply="tutorial.controller.ModalController" style="margin-right:5px"  iconSclass="z-icon-plus-square" label="Create Student" autodisable="self" />
+								</div>
 							</hbox>
 							<hbox align="start" pack="center" vflex="1">
 								<grid style="text-align: center">
@@ -158,22 +160,5 @@
 				</tabbox>
 			</center>
 		</borderlayout>
-
-
-		<!--<rowlayout>
-			<rowchildren colspan="3" >
-				<a>Danh Sách Sinh Viên</a>
-			</rowchildren>
-			<rowchildren colspan="3" >
-				<a>Danh Sách Giảng Viên</a>
-			</rowchildren>
-			<rowchildren colspan="3" >
-				<a>Danh Sách Môn Học</a>
-			</rowchildren>
-			<rowchildren colspan="3" >
-				<a>Danh Sách Lớp Học</a>
-			</rowchildren>
-		</rowlayout>-->
-
 	</window>
 </zk>

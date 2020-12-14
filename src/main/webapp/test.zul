@@ -1,0 +1,13 @@
+<template name="menu">
+    <nav label="@load(menuItem.label)" iconSclass="@load(menuItem.iconSclass)">
+        <apply template="iterate" menuItems="@ref(menuItem.subMenus)"/>
+    </nav>
+</template>
+<template name="iterate">
+<forEach items="@load(menuItems)">
+    <apply template="@load(empty each.subMenus?'menuitem':'menu')" menuItem="@ref(each)"/>
+</forEach>
+</template>
+<template name="menuitem" >
+<navitem label="@load(menuItem.label)" />
+</template>
